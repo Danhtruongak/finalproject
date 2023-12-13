@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!--form submiting vote-->
+    <form class="selectEl2">
+      <div class="voteEl2 hidden">
+        <div class="showSingle">
+          <img class="imgSingle" />
+        </div>
+
+        <div class="labelEl">
+          <h3 class="h3"></h3>
+
+          <div class="range-container">
+            <input type="range" id="range" name="range" min="0" max="10" />
+            <label for="range">5</label>
+          </div>
+          <input class="hidden" name="movie" onClick="displayLarge()" />
+        </div>
+        <button class="btn" type="submit">Send Review</button>
+      </div>
+    </form>
+    <!--form submit vote -------------------------------->
+    <form id="selectEl">
+      <div class="select_bg hidden">
+        <button type="submit" id="selectBtn">Submit Your Vote</button>
+        <ul class="todos" id="todos"></ul>
+      </div>
+    </form>
+    <!-----------form sign in-------------------------->
+
+    <div class="container">
+      <div class="form-bg"></div>
+
+      <form class="sign-in-form">
+        <div class="form-input-wrapper">
+          <input
+            autocomplete="off"
+            type="text"
+            class="form-input"
+            id="name"
+            name="name"
+            placeholder="Name"
+          />
+          <p class="message">Error Message</p>
+        </div>
+
+        <div class="form-input-wrapper">
+          <input
+            autocomplete="off"
+            type="text"
+            class="form-input"
+            id="email"
+            placeholder="Email Address"
+          />
+          <p class="message">Error Message</p>
+        </div>
+
+        <div class="form-input-wrapper">
+          <input
+            autocomplete="off"
+            type="password"
+            class="form-input"
+            id="password"
+            placeholder="Password"
+          />
+          <p class="message">Error Message</p>
+        </div>
+
+        <div class="form-input-wrapper">
+          <input type="submit" value="Log In" class="form-btn" />
+        </div>
+      </form>
+    </div>
+    <!-- heading section with webisitname --------->
+    <div class="section">
+      <header>
+        <div class="title">
+          <h1>Movie Reviews</h1>
+        </div>
+
+        <!----form search bar------------------------->
+        <form id="form">
+          <input class="search" id="search" type="text" placeholder="search" />
+        </form>
+      </header>
+      <div class="bar2">
+        <p id="p"></p>
+      </div>
+
+      <!--setInterval moving images-->
+      <div class="top">
+        <div class="carousel">
+          <div class="image-container" id="imgs">
+            <img class="sliceImg" src="photo/img1.jpg" />
+            <img class="sliceImg" src="photo/img2.jpg" />
+            <img class="sliceImg" src="photo/img4.jpg" />
+            <img class="sliceImg" src="photo/img5.jpg" />
+            <img class="sliceImg" src="photo/img6.jpg" />
+            <img class="sliceImg" src="photo/img7.jpg" />
+          </div>
+        </div>
+        <!---------displays-->
+        <img id="car" src="photo/thankyou.jpg" />
+
+        <img id="light" src="photo/zombie.jpg" />
+      </div>
+      <div class="bar"></div>
+      <!---------main video display through fetch-->
+      <main id="main"></main>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
